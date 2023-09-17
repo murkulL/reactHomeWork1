@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from './components/Button/Button';
+import Input from './components/Input/Input';
+import Card from './components/Card/Card';
+
 
 function App() {
-  return (
+  const clickOnButton = () => {
+    console.log('click on button') 
+  }  
+
+return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button
+      click={clickOnButton}
+      text='some button'
+      />
+      <Input placeholder='Enter some text'/>
+      <div style={{'display': 'flex' , 'gap': '20px', 'justify-content': 'center'}}>
+      <Card 
+      title='card 1'
+      />
+      <Card 
+      title='card 2'
+      />
+      </div>
     </div>
   );
 }
