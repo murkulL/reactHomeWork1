@@ -1,8 +1,9 @@
-const Button  = (props) => {
-
+const Button = (props) => {
   return (
-    <button onClick={props.click} className="button">{props.text}</button>
-  )
-}
+    <button onClick={props.click} className="button">
+      {props.text}
+    </button>
+  );
+};
 
 export default Button;
